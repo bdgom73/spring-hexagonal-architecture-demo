@@ -1,2 +1,2 @@
-# spring-hexagonal-architecture-demop
-spring-hexagonal-architecture-demop
+# spring-hexagonal-architecture-demo
+spring-hexagonal-architecture-demo
