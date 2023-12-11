@@ -93,10 +93,11 @@ public class TeamService
     @Transactional
     public void leave(Long teamId, Long memberId) {
         Team team = getTeam(teamId);
-        if (team.getTotal() <= team.getCurrent()) {
-            throw new IllegalArgumentException("최대 가입 가능 인원은 " + team.getTotal() + "명 입니다");
-        }
         Member member = getMember(memberId);
+
+        if (!member.getTeam().getId().equals(member.getId())) {
+            throw new IllegalArgumentException("해당 팀에 가입 되어있지 않습니다");
+        }
 
         member.changeTeam(null);
         team.leave();

@@ -15,12 +15,13 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.IntStream;
 
+import static com.example.springhexagonalarchitecturedemo.example.utils.CreateDomainUtil.createMember;
+import static com.example.springhexagonalarchitecturedemo.example.utils.CreateDomainUtil.createTeam;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.ArgumentMatchers.any;
@@ -145,27 +146,6 @@ class MemberUseCaseTest {
 
         // then
         verify(editMemberPort, times(1)).delete(anyLong());
-    }
-
-
-    private Member createMember(Long id) {
-        return Member.builder()
-                .id(id)
-                .username("tester_" + id)
-                .createdDate(LocalDateTime.now())
-                .lastModifiedDate(LocalDateTime.now())
-                .build();
-    }
-
-    private Team createTeam(Long id) {
-        return Team.builder()
-                .id(id)
-                .name("testTeam_" + id)
-                .current(1)
-                .total(5)
-                .createdDate(LocalDateTime.now())
-                .lastModifiedDate(LocalDateTime.now())
-                .build();
     }
 
 }
