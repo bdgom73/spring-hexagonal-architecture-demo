@@ -2,6 +2,7 @@ package com.example.springhexagonalarchitecturedemo.example.domain;
 
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 import org.springframework.util.ObjectUtils;
 
@@ -11,6 +12,7 @@ import java.util.List;
 
 @Getter
 @ToString
+@NoArgsConstructor
 public class Team {
     private Long id;
     private String name;

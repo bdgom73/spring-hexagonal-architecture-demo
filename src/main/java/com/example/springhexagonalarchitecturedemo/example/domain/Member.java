@@ -2,12 +2,14 @@ package com.example.springhexagonalarchitecturedemo.example.domain;
 
 import lombok.Builder;
 import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 
 import java.time.LocalDateTime;
 
 @Getter
 @ToString
+@Setter
 public class Member {
 
     private Long id;
