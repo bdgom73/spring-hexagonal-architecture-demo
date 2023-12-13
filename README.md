@@ -1,6 +1,8 @@
 # spring-hexagonal-architecture-demo
 spring-hexagonal-architecture-demo
 
+## Folder Structure
+
 ```text
 com
     └─example
